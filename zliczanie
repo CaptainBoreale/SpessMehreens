@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+char znak;
+int liczba_znakow=0, duze_litery=0;
+
+int main()
+{
+    while(znak!=107){
+        znak=getchar();
+
+        if(znak>=65&&znak<=90){
+            liczba_znakow++;
+            duze_litery++;
+        }
+        else if(znak!=13)
+            liczba_znakow++;
+        else
+            liczba_znakow=liczba_znakow;
+    }
+    cout<<"Wcisnales litere k"<<endl;
+    cout<<"Liczba wprowadzonych znakow: "<<liczba_znakow<<endl;
+    cout<<"Liczba wielkich liter to: "<<duze_litery;
+
+    return 0;
+}
