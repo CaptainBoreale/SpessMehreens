@@ -43,6 +43,17 @@ double ekstrema_tab(double tab[]){
     cout<<"Wartosc minimalna wynosi: "<<mini<<"\n";
     cout<<"Wartosc maksymalna wynosi: "<<maksi<<"\n";
 }
+double zliczanie_tab(double tab[]){
+    double ujemne, dodatnie, zerowe;
+    for(int i=0;i<ROZMIAR;i++){
+        if(tab[i]>0) dodatnie++;
+        if(tab[i]<0) ujemne++;
+        if(tab[i]==0) zerowe++;
+    }
+    cout<<"Ilosc dodatnich elementow wynosi: "<<dodatnie<<"\n";
+    cout<<"Ilosc ujemnych elementow wynosi: "<<ujemne<<"\n";
+    cout<<"Ilosc zerowych elementow wynosi: "<<zerowe<<"\n";
+}
 
 int main()
 {
@@ -51,6 +62,7 @@ int main()
     //wypisz(Tab);
     //suma_tab(Tab);
     //srednia_tab(Tab);
-    ekstrema_tab(Tab);
+    //ekstrema_tab(Tab);
+    zliczanie_tab(Tab);
     return 0;
 }
