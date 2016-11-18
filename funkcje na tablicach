@@ -1,0 +1,56 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+#define ROZMIAR 10
+double Tab[ROZMIAR];
+
+double wczytaj(double tab[]){
+    for(int i=0;i<ROZMIAR;i++){
+        cout<<"Wprowadz "<<i+1<<" liczbe: ";
+        cin>>tab[i];
+        //cout<<"Tab\[i\]= "<<tab[i]<<"\n";
+    }
+}
+double wypisz(double tab[]){
+    for(int j=0;j<ROZMIAR;j++){
+        cout<<"Tab["<<j<<"]= "<<tab[j]<<"\n";
+        Sleep(1000);
+    }
+}
+double suma_tab(double tab[]){
+    double suma=0;
+    for(int k=0;k<ROZMIAR;k++){
+            suma+=tab[k];
+    }
+    cout<<"Suma wynosi: "<<suma<<"\n";
+}
+double srednia_tab(double tab[]){
+    double suma=0, srednia;
+    for(int l=0;l<ROZMIAR;l++){
+            suma+=tab[l];
+            srednia=suma/ROZMIAR;
+    }
+    cout<<"Srednia wynosi: "<<srednia<<"\n";
+}
+double ekstrema_tab(double tab[]){
+    double maksi=tab[0], mini=tab[0];
+    for(int l=0;l<ROZMIAR;l++){
+        if(tab[l]>maksi) maksi=tab[l];
+        if(tab[l]<mini) mini=tab[l];
+    }
+    cout<<"Wartosc minimalna wynosi: "<<mini<<"\n";
+    cout<<"Wartosc maksymalna wynosi: "<<maksi<<"\n";
+}
+
+int main()
+{
+    cout << "Rozpoczynamy wprowadzanie liczb" << endl;
+    wczytaj(Tab);
+    //wypisz(Tab);
+    //suma_tab(Tab);
+    //srednia_tab(Tab);
+    ekstrema_tab(Tab);
+    return 0;
+}
